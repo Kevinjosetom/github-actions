@@ -1,0 +1,14 @@
+name: my-workflow
+
+on: push
+
+jobs:
+    first-job:
+        runs-on: ubuntu-latest
+        steps:
+        - name: checkout
+          run: echo "checkout code"
+        - name: list
+          run: ls-a
+          
+
