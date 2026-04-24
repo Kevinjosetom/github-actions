@@ -1,0 +1,20 @@
+name: my-second-workflow
+
+on: push
+
+jobs:
+    ASCII-workflow:
+        runs-on: ubuntu-latest
+        steps:
+        - name: checkout
+          uses: actions/checkout@v4
+
+        - name: install cowsays
+          run: sudo apt install cowsay -y
+
+        - name: execute cowsay
+          run: cowsay -f dragon "Yooo" >> dragon.txt
+
+        - name: cat txt
+          run: cat dragon.txt
+          
