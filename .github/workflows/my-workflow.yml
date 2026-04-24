@@ -9,15 +9,14 @@ jobs:
         - name: checkout
           uses: actions/checkout@v6
         
+        - name: list
+          run: ls
+
         - name: execute sh
           run: |
             chmod +x shell.sh  
             ./shell.sh
 
-
-        - name: list
-          run: ls
-        
         - name: read-file
           run: cat dragon.txt
 
