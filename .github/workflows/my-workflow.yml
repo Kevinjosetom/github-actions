@@ -15,7 +15,7 @@ jobs:
         - name: execute sh
           run: |
             chmod +x shell.sh  
-            sh ./shell.sh
+            ./shell.sh
 
         - name: read-file
           run: cat dragon.txt
